@@ -1,0 +1,7 @@
+parameters:
+#    bossa_md_blog.example.class: Bossa\MdBlogBundle\Example
+
+services:
+#    bossa_md_blog.example:
+#        class: %bossa_md_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
