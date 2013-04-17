@@ -7,11 +7,15 @@ use Behat\Behat\Context\ClosuredContextInterface,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
+use SensioLabs\Behat\PageObjectExtension\Context\PageObjectContext;
+
 /**
  * Features context.
  */
-class TrainingManagerContext extends BehatContext
+class TrainingManagerContext extends PageObjectContext
 {
+    private $pageObject;
+    
     /**
      * Initializes context.
      * Every scenario gets it's own context object.
@@ -28,9 +32,10 @@ class TrainingManagerContext extends BehatContext
     /**
      * @Given /^I am at the "([^"]*)" page$/
      */
-    public function iAmAtThePage($arg1)
+    public function iAmAtThePage($page)
     {
-        throw new PendingException();
+        $this->pageObject = $this->getPage($page);
+        $this->pageObject->open();
     }
 
     /**
