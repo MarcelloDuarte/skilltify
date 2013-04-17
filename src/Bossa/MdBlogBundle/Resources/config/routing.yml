@@ -1,3 +1,0 @@
-bossa_md_blog_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: BossaMdBlogBundle:Default:index }
