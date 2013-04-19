@@ -1,0 +1,9 @@
+_default:
+    resource: "@BossaSkilltifyBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix: /
+
+_assessment:
+    resource: "@BossaSkilltifyBundle/Controller/AssessmentsController.php"
+    type:     annotation
+    prefix: /assessments
